@@ -14,6 +14,7 @@ Dans ce repo, nous allons voir comment implémenter la requête Spring Data Mong
 ### Exemples réalisés
 ---
 - CRUD
+- Example find by field
 - 
 
 ### Exécuter et tester les APIs
