@@ -265,6 +265,104 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "FindByMultipleColumns",
+			"item": [
+				{
+					"name": "getByLevelAndPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/multipleColumns/byLevelAndPublished?level=3&published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"multipleColumns",
+								"byLevelAndPublished"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								},
+								{
+									"key": "published",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleAndPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/multipleColumns/byTitleAndPublished?title=Hibernate&published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"multipleColumns",
+								"byTitleAndPublished"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Hibernate"
+								},
+								{
+									"key": "published",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleOrDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/multipleColumns/byTitleOrDescription?title=Hibernate&description=Spring Data Description",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"multipleColumns",
+								"byTitleOrDescription"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Hibernate"
+								},
+								{
+									"key": "description",
+									"value": "Spring Data Description"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

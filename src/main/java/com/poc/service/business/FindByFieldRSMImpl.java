@@ -21,7 +21,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             log.info("----- getByLevel : {}", level);
             return findByFieldCustomRepository.findByLevel(level);
         } catch (Exception e) {
-            log.error("Error getByLevel : {} : {}", e.getMessage(), e);
+            log.error("Error getByLevel : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -32,7 +32,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             log.info("----- getByLevelEquals : {}", level);
             return findByFieldCustomRepository.findByLevelEquals(level);
         } catch (Exception e) {
-            log.error("Error getByLevelEquals : {} : {}", e.getMessage(), e);
+            log.error("Error getByLevelEquals : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -43,7 +43,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             log.info("----- getByPublished : {}", isPublished);
             return findByFieldCustomRepository.findByPublished(isPublished);
         } catch (Exception e) {
-            log.error("Error getByPublished : {} : {}", e.getMessage(), e);
+            log.error("Error getByPublished : {} {}", e.getMessage(), e);
             throw e;
         }
     }
