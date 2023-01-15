@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Spring Data\",\r\n    \"description\": \"Spring Data Description\",\r\n    \"published\": true\r\n}",
+							"raw": "{\r\n    \"title\": \"Spring Data\",\r\n    \"description\": \"Spring Data Description\",\r\n    \"level\": 3,\r\n    \"published\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -43,7 +43,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"title\": \"Spring Data\",\r\n        \"description\": \"Spring Data Description\",\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Java Spring Boot\",\r\n        \"description\": \"Spring Framework Description\",\r\n        \"published\": false\r\n    },\r\n    {\r\n        \"title\": \"Hibernate\",\r\n        \"description\": \"Hibernate ORM Description\",\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Spring Boot\",\r\n        \"description\": \"Spring Boot Description\",\r\n        \"published\": false\r\n    },\r\n    {\r\n        \"title\": \"Spring JPA\",\r\n        \"description\": \"Spring Data JPA Description\",\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Spring Batch\",\r\n        \"description\": \"Spring Batch Description\",\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Spring Security\",\r\n        \"description\": \"Spring Security Description\",\r\n        \"published\": false\r\n    }\r\n]",
+							"raw": "[\r\n    {\r\n        \"title\": \"Spring Data\",\r\n        \"description\": \"Spring Data Description\",\r\n        \"level\": 3,\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Java Spring Boot\",\r\n        \"description\": \"Spring Framework Description\",\r\n        \"level\": 1,\r\n        \"published\": false\r\n    },\r\n    {\r\n        \"title\": \"Hibernate\",\r\n        \"description\": \"Hibernate ORM Description\",\r\n        \"level\": 3,\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Spring Boot\",\r\n        \"description\": \"Spring Boot Description\",\r\n        \"level\": 2,\r\n        \"published\": false\r\n    },\r\n    {\r\n        \"title\": \"Spring JPA\",\r\n        \"description\": \"Spring Data JPA Description\",\r\n        \"level\": 3,\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Spring Batch\",\r\n        \"description\": \"Spring Batch Description\",\r\n        \"level\": 4,\r\n        \"published\": true\r\n    },\r\n    {\r\n        \"title\": \"Spring Security\",\r\n        \"description\": \"Spring Security Description\",\r\n        \"level\": 5,\r\n        \"published\": false\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -173,6 +173,92 @@
 							"path": [
 								"tutorials",
 								"852c0029-94da-48dd-9813-7075dbd95d66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FindByField",
+			"item": [
+				{
+					"name": "getByLevel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/levelIs?level=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"levelIs"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByLevelEquals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/levelEquals?level=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"levelEquals"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/isPublished?published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"isPublished"
+							],
+							"query": [
+								{
+									"key": "published",
+									"value": "true"
+								}
 							]
 						}
 					},
