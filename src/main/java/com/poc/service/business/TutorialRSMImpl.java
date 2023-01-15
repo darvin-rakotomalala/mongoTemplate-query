@@ -23,7 +23,7 @@ public class TutorialRSMImpl implements TutorialRSM {
             log.info("----- getTutorialById : {}", id);
             return tutorialCustomRepository.findTutorialById(id);
         } catch (Exception e) {
-            log.error("Error getTutorialById : {}", e.getMessage(), e);
+            log.error("Error getTutorialById : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -34,7 +34,7 @@ public class TutorialRSMImpl implements TutorialRSM {
             log.info("----- getAllTutorials");
             return tutorialCustomRepository.findAllTutorials(pageable);
         } catch (Exception e) {
-            log.error("Error getAllTutorials : {}", e.getMessage(), e);
+            log.error("Error getAllTutorials : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -45,7 +45,7 @@ public class TutorialRSMImpl implements TutorialRSM {
             log.info("----- getAllTutorialsByTitle : {}", title);
             return tutorialCustomRepository.findAllTutorialsByTitle(title, pageable);
         } catch (Exception e) {
-            log.error("Error getAllTutorialsByTitle : {}", e.getMessage(), e);
+            log.error("Error getAllTutorialsByTitle : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
